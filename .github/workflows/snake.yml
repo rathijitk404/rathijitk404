@@ -2,7 +2,7 @@ name: Generate snake
 
 on:
   schedule:
-    - cron: "0 */12 * * *"
+    - cron: "0 * * * *"
   workflow_dispatch:
   push:
     branches: [main]
@@ -29,6 +29,11 @@ jobs:
         run: |
           gh api users/${{ github.repository_owner }} > user.json
           python3 .github/scripts/banner.py bus-stop.svg user.json dist/banner.svg
+
+      - name: Anime view counter (PNG)
+        run: |
+          pip install pillow
+          python3 .github/scripts/views.py dist ${{ github.repository_owner }}
 
       - name: Shocked snake intro
         run: python3 .github/scripts/shock.py dist/github-snake.svg dist/github-snake-dark.svg
