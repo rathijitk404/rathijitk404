@@ -9,13 +9,17 @@ RAW = f"https://raw.githubusercontent.com/{user}/{user}/output"
 UA = {"User-Agent": "Mozilla/5.0"}
 
 def fetch(url, binary=False):
-    data = urllib.request.urlopen(urllib.request.Request(url, headers=UA), timeout=30).read()
+    try:
+        data = urllib.request.urlopen(urllib.request.Request(url, headers=UA), timeout=30).read()
+    except Exception as e:
+        print("FETCH FAILED", url, e); raise
     return data if binary else data.decode("utf-8", "replace")
 
 def keep_previous():
     for name in ("counter.png", "runs.txt"):
-        try: open(f"{out}/{name}", "wb").write(fetch(f"{RAW}/{name}", True))
-        except Exception as e: print("no previous", name, e)
+        try: data = fetch(f"{RAW}/{name}", True)
+        except Exception as e: print("no previous", name, e); continue
+        open(f"{out}/{name}", "wb").write(data)
 
 try:
     os.makedirs(out, exist_ok=True)
