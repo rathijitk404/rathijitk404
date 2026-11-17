@@ -40,7 +40,7 @@ Modding and patching.. web developer `</>`
 </picture>
 
 <p align="center">
-  <img src="./boxes/views.svg" alt="Profile view (◍•ᴗ•◍)❤" />
+  <img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fcount.getloli.com%2Frecord%2F%40rathijitk404&query=%24.num&label=PROFILE%20VIEWS&color=2563eb&labelColor=555555&style=for-the-badge" alt="Profile views" />
   <br>
-  <img src="https://count.getloli.com/@rathijitk404?name=rathijitk404&theme=moebooru&padding=7&offset=0&align=top&scale=1&pixelated=1&darkmode=0" alt="" />
+  <img src="https://count.getloli.com/@rathijitk404?name=rathijitk404&theme=moebooru&padding=7&offset=0&align=top&scale=1&pixelated=1&darkmode=auto" alt="" />
 </p>
