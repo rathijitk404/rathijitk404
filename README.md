@@ -40,5 +40,7 @@ Modding and patching.. web developer `</>`
 </picture>
 
 <p align="center">
-  <img src="https://komarev.com/ghpvc/?username=rathijitk404&label=PROFILE%20VIEWS&color=2563eb&labelColor=0b101e&style=for-the-badge" alt="Profile views" />
+  <img src="./boxes/views.svg" alt="PROFILE VIEW (◍•ᴗ•◍)❤" />
+  <br>
+  <img src="https://count.getloli.com/@rathijitk404?name=rathijitk404&theme=moebooru&padding=7&offset=0&align=top&scale=1&pixelated=1&darkmode=0" alt="" />
 </p>
