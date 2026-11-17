@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="219" height="28" viewBox="0 0 219.4 28" role="img" aria-label="HI THERE 👋 RYÚK ZÉRÖ">
+<clipPath id="r"><rect width="219.4" height="28" rx="6"/></clipPath>
+<g clip-path="url(#r)"><rect width="114.0" height="28" fill="#0b101e"/><rect x="114.0" width="105.4" height="28" fill="#2563eb"/></g>
+<rect x=".5" y=".5" width="218.4" height="27" rx="6" fill="none" stroke="#1d4ed8"/>
+<g font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="12.5" font-weight="700" fill="#fff" dominant-baseline="central">
+<text x="14" y="14.5" textLength="86.0" lengthAdjust="spacingAndGlyphs">HI THERE 👋</text>
+<text x="128.0" y="14.5" textLength="77.4" lengthAdjust="spacingAndGlyphs">RYÚK ZÉRÖ</text></g></svg>
