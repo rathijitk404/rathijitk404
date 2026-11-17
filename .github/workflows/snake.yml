@@ -23,6 +23,13 @@ jobs:
             dist/github-snake.svg
             dist/github-snake-dark.svg?palette=github-dark
 
+      - name: Build banner (bus stop + live numbers)
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh api users/${{ github.repository_owner }} > user.json
+          python3 .github/scripts/banner.py bus-stop.svg user.json dist/banner.svg
+
       - name: Shocked snake intro
         run: python3 .github/scripts/shock.py dist/github-snake.svg dist/github-snake-dark.svg
 

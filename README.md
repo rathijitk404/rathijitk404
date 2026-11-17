@@ -1,5 +1,9 @@
 <p align="center">
-  <img src="./bus-stop.svg" width="100%" alt="Rainy night bus stop" />
+  <sub>Developed with passion · created by <b>𐂂Rathijit</b></sub>
+</p>
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/rathijitk404/rathijitk404/output/banner.svg" width="100%" alt="Rainy night bus stop with repository and days stats" />
 </p>
 
 # RYÚK ZÉRÖ
