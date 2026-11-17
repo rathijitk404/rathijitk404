@@ -31,6 +31,8 @@ try:
     print("sprites found:", len(imgs))
     assert len(imgs) >= 10, "demo counter did not return 10 digit images"
     sprites = [Image.open(io.BytesIO(base64.b64decode(b))).convert("RGBA") for b in imgs[:10]]
+    os.makedirs(f"{out}/sprites", exist_ok=True)
+    for n, sp in enumerate(sprites): sp.save(f"{out}/sprites/{n}.png")
     # 2) count (this fetch adds 1 view; remember it so it can be subtracted)
     svg = fetch(f"https://komarev.com/ghpvc/?username={user}&label=V&color=blue")
     nums = re.findall(r">\s*([\d,]+)\s*<", svg)
