@@ -1,0 +1,16 @@
+name: debug
+on: workflow_dispatch
+jobs:
+  d:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          for u in \
+            "https://count.getloli.com/@demo?theme=moebooru" \
+            "https://count.getloli.com/get/@demo?theme=moebooru" \
+            "https://count.getloli.com/" \
+            "https://moe-counter.glitch.me/@demo?theme=moebooru" \
+            "https://komarev.com/ghpvc/?username=rathijitk404&label=V" ; do
+            code=$(curl -s -o /tmp/o -w "%{http_code} %{size_download}" -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/120 Safari/537.36" -H "Accept: image/svg+xml,image/*,*/*" "$u")
+            echo "RESULT $u -> $code"; head -c 200 /tmp/o | tr '\n' ' '; echo
+          done
