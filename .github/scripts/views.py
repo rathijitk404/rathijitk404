@@ -1,19 +1,20 @@
 """Anime-girls view counter as a plain PNG (the GitHub app can't show the live SVG one).
 count = komarev's page-view count (every profile load, app + web) minus the +1 this script adds per run.
 usage: python views.py <outdir> <github_user>"""
-import base64, io, os, re, sys, urllib.request
+import base64, io, os, re, subprocess, sys
 from PIL import Image
 
 out, user = sys.argv[1], sys.argv[2]
 RAW = f"https://raw.githubusercontent.com/{user}/{user}/output"
-UA = {"User-Agent": "Mozilla/5.0"}
 
 def fetch(url, binary=False):
-    try:
-        data = urllib.request.urlopen(urllib.request.Request(url, headers=UA), timeout=30).read()
-    except Exception as e:
-        print("FETCH FAILED", url, e); raise
-    return data if binary else data.decode("utf-8", "replace")
+    # curl works where urllib gets a 403 from the counter site
+    r = subprocess.run(["curl", "-sSL", "--fail", "--max-time", "30", "-A",
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/120 Safari/537.36",
+        "-H", "Accept: image/svg+xml,image/*,*/*", url], capture_output=True)
+    if r.returncode:
+        print("FETCH FAILED", url, r.stderr.decode()[:200]); raise RuntimeError(url)
+    return r.stdout if binary else r.stdout.decode("utf-8", "replace")
 
 def keep_previous():
     for name in ("counter.png", "runs.txt"):
