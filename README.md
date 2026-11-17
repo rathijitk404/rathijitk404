@@ -24,6 +24,13 @@ You can call me **RYÚK** or **GOPU** or **Rathijitk**
 Modding and patching.. web developer `</>`
 <br>Still learning (ʘᴗʘ✿)...!
 
+<img src="./boxes/like.svg" alt="What I like (≧▽≦)" />
+
+- I love listening to music 🎧
+- I care about Dark 🌑
+- I have a wave about development web pages `</>` and apps
+- (✿^‿^) ❤ with passion ..
+
 <img src="./boxes/newdev.svg" alt="New developer" />
 
 <picture>
