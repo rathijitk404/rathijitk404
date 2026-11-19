@@ -77,10 +77,8 @@ if __name__ == "__main__":
     RAW = f"https://raw.githubusercontent.com/{user}/{user}/output"
     try:
         os.makedirs(out, exist_ok=True)
-        demo = fetch("https://count.getloli.com/@demo?theme=moebooru&length=10&pixelated=1")  # draws 0123456789
-        imgs = re.findall(r'<image[^>]*?href="data:image/[a-z]+;base64,([^"]+)"', demo)
-        assert len(imgs) >= 10, "demo counter did not return 10 digit images"
-        sprites = [Image.open(io.BytesIO(base64.b64decode(b))).convert("RGBA") for b in imgs[:10]]
+        here = os.path.dirname(os.path.abspath(__file__))
+        sprites = [Image.open(f"{here}/sprites/{i}.png").convert("RGBA") for i in range(10)]  # bundled: getloli is behind Cloudflare
         svg = fetch(f"https://komarev.com/ghpvc/?username={user}&label=V&color=blue")  # this fetch adds 1 view
         total = int(re.findall(r">\s*([\d,]+)\s*<", svg)[-1].replace(",", ""))
         try: runs = int(fetch(f"{RAW}/runs.txt").strip())
