@@ -42,8 +42,5 @@ Modding and patching.. web developer `</>`
 <p align="center">
   <img src="./boxes/views.svg" alt="PROFILE VIEW (◍•ᴗ•◍)❤" />
   <br>
-  <img src="https://raw.githubusercontent.com/rathijitk404/rathijitk404/output/counter.gif" width="420" alt="Profile views" />
-  <br>
-  <img src="https://komarev.com/ghpvc/?username=rathijitk404-live&label=VISITORS&color=2563eb&labelColor=0b101e&style=for-the-badge&base=1448" alt="Visitors" />
-  <img src="https://komarev.com/ghpvc/?username=rathijitk404&label=V&color=blue&style=flat" width="1" height="1" alt="" />
+  <img width="420px" src="https://count.getloli.com/get/@rathijitk404?theme=moebooru"></img>
 </p>
