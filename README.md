@@ -43,5 +43,6 @@ Modding and patching.. web developer `</>`
   <img src="./boxes/views.svg" alt="PROFILE VIEW (◍•ᴗ•◍)❤" />
   <br>
   <img src="https://raw.githubusercontent.com/rathijitk404/rathijitk404/output/counter.gif" width="420" alt="Profile views" />
-  <img src="https://komarev.com/ghpvc/?username=rathijitk404&label=V&color=blue&style=flat" width="1" height="1" alt="" />
+  <br>
+  <img src="https://komarev.com/ghpvc/?username=rathijitk404&label=VISITORS&color=2563eb&labelColor=0b101e&style=for-the-badge&base=1347" alt="Visitors" />
 </p>
