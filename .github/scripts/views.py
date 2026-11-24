@@ -81,17 +81,13 @@ if __name__ == "__main__":
         sprites = [Image.open(f"{here}/sprites/{i}.png").convert("RGBA") for i in range(10)]  # bundled: getloli is behind Cloudflare
         svg = fetch(f"https://komarev.com/ghpvc/?username={user}&label=V&color=blue")  # this fetch adds 1 view
         total = int(re.findall(r">\s*([\d,]+)\s*<", svg)[-1].replace(",", ""))
-        try: runs = int(fetch(f"{RAW}/runs.txt").strip())
-        except Exception: runs = 0
-        runs += 1
-        views = START + max(total - runs, 0)
+        views = START + total  # total only ever goes up, so the number never drops
         digits = str(views).zfill(7)
-        print("komarev", total, "runs", runs, "->", digits)
+        print("komarev", total, "->", digits)
         animate(sprites, digits, f"{out}/counter.gif")
-        open(f"{out}/runs.txt", "w").write(str(runs))
     except Exception as e:
         print("views.py failed, keeping previous files:", e)
-        for name in ("counter.gif", "runs.txt"):
+        for name in ("counter.gif",):
             try: data = fetch(f"{RAW}/{name}", True)
             except Exception: continue
             open(f"{out}/{name}", "wb").write(data)
